@@ -56,3 +56,22 @@ for (let x = 0; x < user_authorized.length; x++){
 //   document.getElementById("output").innerHTML = "Attenzione: Non hai l'autorizzazione!";
 // }
 
+
+
+// Gioco dei dadi
+
+const bottone_dadi = document.getElementById("#bottone-dadi");
+
+console.log(bottone_dadi);
+
+const container_risultati_dadi = document.getElementById("#container_risultati_dadi");
+
+coccnsole.log(container_risultati_dadi);
+
+bottone_dadi.addEventListener("click", function(){
+
+  container_risultati_dadi.classList.remove("hide");
+
+
+
+});

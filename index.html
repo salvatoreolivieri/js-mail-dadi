@@ -12,17 +12,33 @@
 <body>
 
   <section class="d-flex flex-column justify-content-center align-items-center">
-    <div class="container"></div>
-    <h1>Benvenuto Player</h1>
-  
-    <!-- <p>Inserisci la tua mail per giocare</p>
-  
-    <form>
-      <input type="text" id="mail" name="mail" placeholder="Inserisci la tua mail">
-      <button type="button" id="autentication">Autentifica</button>
-    </form> -->
-  
-    <p class="py-3" id="output"></p>
+    <div class="container text-center">
+      <h1>Benvenuto Player</h1>
+    
+      <!-- <p>Inserisci la tua mail per giocare</p>
+    
+      <form>
+        <input type="text" id="mail" name="mail" placeholder="Inserisci la tua mail">
+        <button type="button" id="autentication">Autentifica</button>
+      </form> -->
+    
+      <p class="py-3" id="output"></p>
+
+      <button class="btn btn-secondary" id=#bottone-dadi>Gioca</button>
+      <div class="container hide" id=#container_risultati_dadi>
+        <div class="row">
+          <div class="col-6">
+            <h2>Il tuo lancio</h2>
+            <p id="user_result"></p>
+          </div>
+          <div class="col-6">
+            <h2>Il lancio del pc</h2>
+            <p id="pc_result"></p>
+        </div>
+      </div>
+    </div>
+
+
   </section>
   
   <script src="script.js"></script>

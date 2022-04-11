@@ -5,3 +5,11 @@ section{
   color: white;
   background-color: #3725E6;
 }
+
+.hide{
+  display: none;
+}
+
+.show{
+  display: block;
+}
