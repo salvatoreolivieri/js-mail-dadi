@@ -15,19 +15,23 @@ const user_authorized = [
   "Stefano.cavazza@gmail.com"
 ]
 
-const btn_autentification = document.querySelector("#autentification");
+const btn_autentication = document.querySelector("#autentication");
 
-btn_autentification.addEventListener("click"), function(){
 
-  let user_mail = document.getElementById('mail').value;
+console.log(btn_autentication);
+
+btn_autentication.addEventListener("click", function() {
+
+  let user_mail = document.getElementById('mail').value;  
+
   console.log(user_mail);
 
+});
+
+
+
+if (!(user_mail === user_authorized)){
+  document.getElementById("output").innerHTML("Non hai l'autorizzazione per accedere")
+} else {
+  document.getElementById("output").innerHTML("Ci siamo, ora sei pronto a giocare")
 }
-
-
-
-// if (!(user_mail === user_authorized)){
-//   document.getElementById("output").innerHTML("Non hai l'autorizzazione per accedere")
-// } else {
-//   document.getElementById("output").innerHTML("Ci siamo, ora sei pronto a giocare")
-//
