@@ -34,17 +34,38 @@ for (let x = 0; x < user_authorized.length; x++) {
 }
 
 const bottone_dadi = document.getElementById("bottone-dadi");
-const bottone_rilancia = document.getElementById("bottone-rilancia");
 const bottone_refresh = document.getElementById("bottone-refresh");
 
 
 if (correct_mail === true) {
   document.getElementById("output").innerHTML = "Ci siamo, ora sei pronto a giocare";
+  bottone_refresh.className = "hide";
 
 } else {
   document.getElementById("output").innerHTML = "Non sei autorizzato";
   bottone_dadi.className = "hide";
-  bottone_rilancia.className = "hide";
 
-  bottone_refresh.classList.remove("hide");
 } 
+
+
+// Regole e logica gioco dadi
+
+let UserPlayer; 
+let PcPlayer; 
+
+bottone_dadi.addEventListener("click", function(){
+  UserPlayer = Math.ceil(Math.random() *6);
+  PcPlayer = Math.ceil(Math.random() *6);
+
+  console.log("UserPlayer:", UserPlayer);
+  console.log("PcPlayer:", PcPlayer);
+
+  if (UserPlayer > PcPlayer){
+    console.log("Hai Vinto");
+  } else if (UserPlayer < PcPlayer){
+    console.log("Hai Perso");
+  } else {
+    console.log("Pareggio");
+  }
+});
+
