@@ -57,14 +57,20 @@ bottone_dadi.addEventListener("click", function(){
   UserPlayer = Math.ceil(Math.random() *6);
   PcPlayer = Math.ceil(Math.random() *6);
 
+  document.getElementById("risultato_utente").innerHTML = `Il numero che hai estratto tu: ${UserPlayer}`;
+  document.getElementById("risultato_pc").innerHTML = `Il numero che ha estratto il pc: ${PcPlayer}`;
+
   console.log("UserPlayer:", UserPlayer);
   console.log("PcPlayer:", PcPlayer);
 
   if (UserPlayer > PcPlayer){
+    document.getElementById("esito_partita").innerHTML = "Hai Vinto";
     console.log("Hai Vinto");
   } else if (UserPlayer < PcPlayer){
+    document.getElementById("esito_partita").innerHTML = "Hai Perso";
     console.log("Hai Perso");
   } else {
+    document.getElementById("esito_partita").innerHTML = "Pareggio";
     console.log("Pareggio");
   }
 });
