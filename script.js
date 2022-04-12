@@ -22,7 +22,7 @@ const user_authorized = [
 const user_mail = prompt("Inserisci la tua mail per giocare");
 
 
-// Processo di autentificazioen
+// Processo di autentificazione
 let correct_mail = false; 
 
 for (let x = 0; x < user_authorized.length; x++) {
@@ -33,12 +33,18 @@ for (let x = 0; x < user_authorized.length; x++) {
 
 }
 
+const bottone_dadi = document.getElementById("bottone-dadi");
+const bottone_rilancia = document.getElementById("bottone-rilancia");
+const bottone_refresh = document.getElementById("bottone-refresh");
+
+
 if (correct_mail === true) {
-  document.getElementById("output").innerHTML = "Ci siamo, ora sei pronto a giocare"
+  document.getElementById("output").innerHTML = "Ci siamo, ora sei pronto a giocare";
 
-} else while (correct_mail === false) {
+} else {
+  document.getElementById("output").innerHTML = "Non sei autorizzato";
+  bottone_dadi.className = "hide";
+  bottone_rilancia.className = "hide";
 
-  prompt("Non sei autorizzato, inserisci una mail valida.");
-
-  correct_mail === true;
+  bottone_refresh.classList.remove("hide");
 } 
