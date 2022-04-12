@@ -22,6 +22,7 @@ const user_authorized = [
 const user_mail = prompt("Inserisci la tua mail per giocare");
 
 
+// Processo di autentificazioen
 let correct_mail = false; 
 
 for (let x = 0; x < user_authorized.length; x++) {
@@ -33,7 +34,11 @@ for (let x = 0; x < user_authorized.length; x++) {
 }
 
 if (correct_mail === true) {
-  console.log("sei autorizzato")
-} else {
-  console.log("non sei autorizzato");
-}
+  document.getElementById("output").innerHTML = "Ci siamo, ora sei pronto a giocare"
+
+} else while (correct_mail === false) {
+
+  prompt("Non sei autorizzato, inserisci una mail valida.");
+
+  correct_mail === true;
+} 
