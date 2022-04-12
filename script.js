@@ -17,8 +17,8 @@ const user_authorized = [
   "Stefano.cavazza@gmail.com"
 ]
 
-// raccolgo la mail dell'utente
 
+// raccolgo la mail dell'utente
 const user_mail = prompt("Inserisci la tua mail per giocare");
 
 
@@ -33,45 +33,41 @@ const user_mail = prompt("Inserisci la tua mail per giocare");
 
 // });
 
-
-
+let mail_presente = false;
 
 for (let x = 0; x < user_authorized.length; x++){
-  
-  let mail_presente = false;
 
   if (user_authorized[x] === user_mail){
     mail_presente = true;
-    document.getElementById("output").innerHTML = "Ci siamo, ora sei pronto a giocare";
-
-    console.log(mail_presente);
-
-  } else{
-    document.getElementById("output").innerHTML = "Attenzione: Non hai l'autorizzazione!";
   }
 }
 
-// if (mail_presente = true){
-// } else{
-//   document.getElementById("output").innerHTML = "Attenzione: Non hai l'autorizzazione!";
-// }
 
+if (mail_presente = false){
+  document.getElementById("output").innerHTML = "Attenzione: Non hai l'autorizzazione!";
+} else{
+  document.getElementById("output").innerHTML = "Ci siamo, ora sei pronto a giocare";
+}
 
 
 // Gioco dei dadi
 
-const bottone_dadi = document.getElementById("#bottone-dadi");
-
-console.log(bottone_dadi);
-
-const container_risultati_dadi = document.getElementById("#container_risultati_dadi");
-
-coccnsole.log(container_risultati_dadi);
-
-bottone_dadi.addEventListener("click", function(){
-
-  container_risultati_dadi.classList.remove("hide");
 
 
+// const bottone_dadi = document.getElementById("#bottone-dadi");
+// // const bottone_rilancia = document.getElementById("#bottone-rilancia");
 
-});
+// // console.log(bottone_rilancia);
+
+// const container_risultati_dadi = document.getElementById("#container_risultati_dadi");
+
+// // coccnsole.log(container_risultati_dadi);
+
+// bottone_dadi.addEventListener("click", function(){
+
+//   container_risultati_dadi.classList.remove("hide");
+//   bottone_rilancia.classList.remove("hide");
+
+
+// });
+
